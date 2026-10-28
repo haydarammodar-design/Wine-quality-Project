@@ -1,0 +1,16 @@
+# Environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Build artefacts
+*.egg-info/
+build/
+dist/
+
+# Generated outputs
+models/*.joblib
+reports/figures/
