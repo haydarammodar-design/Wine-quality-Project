@@ -1,0 +1,43 @@
+seed: 42
+paths:
+  raw_dir: data/raw
+  red_file: winequality-red.csv
+  white_file: winequality-white.csv
+  model_file: models/model.joblib
+  figures_dir: reports/figures
+data:
+  url: https://archive.ics.uci.edu/static/public/186/wine+quality.zip
+  separator: ";"
+  quality_column: quality
+  good_threshold: 7        # quality >= 7 -> good wine (class 1)
+  test_size: 0.2
+  drop_duplicates: true
+features:
+  numeric:
+    - fixed_acidity
+    - volatile_acidity
+    - citric_acid
+    - residual_sugar
+    - chlorides
+    - free_sulfur_dioxide
+    - total_sulfur_dioxide
+    - density
+    - pH
+    - sulphates
+    - alcohol
+  categorical:
+    - wine_type
+cv:
+  n_splits: 5
+scoring: average_precision
+threshold:
+  min_recall: 0.80         # goal: catch at least 80 % of the good wines
+models:
+  logistic:
+    model__C: [0.001, 0.01, 0.1, 1, 10, 100, 1000]
+    model__class_weight: [null, balanced]
+  knn:
+    model__n_neighbors: [5, 15, 31, 51, 75, 101, 151]
+    model__weights: [uniform, distance]
+  linear_svm:
+    model__estimator__C: [0.001, 0.01, 0.1, 1, 10, 100]

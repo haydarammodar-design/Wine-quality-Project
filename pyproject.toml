@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wine-quality"
+version = "0.1.0"
+description = "Predict whether a Vinho Verde wine is good (quality >= 7)."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Haidara Mohammad"}, {name = "Medoune Mitchell Fall"}]
+dependencies = ["joblib==1.6.0",
+    "matplotlib==3.11.2",
+    "numpy==2.5.4",
+    "pandas==3.0.6",
+    "pyyaml==6.0.3",
+    "scikit-learn==1.9.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1", "ruff==0.17.3"]
+
+[project.scripts]
+wine-quality = "wine_quality.cli:main"
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
