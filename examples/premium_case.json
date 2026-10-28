@@ -1,0 +1,14 @@
+{
+  "fixed_acidity": 7.0,
+  "volatile_acidity": 0.22,
+  "citric_acid": 0.36,
+  "residual_sugar": 2.0,
+  "chlorides": 0.03,
+  "free_sulfur_dioxide": 45.0,
+  "total_sulfur_dioxide": 170.0,
+  "density": 0.991,
+  "pH": 3.0,
+  "sulphates": 0.45,
+  "alcohol": 12.8,
+  "wine_type": "white"
+}
