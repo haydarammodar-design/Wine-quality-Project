@@ -41,4 +41,5 @@ mining from physicochemical properties. Decision Support Systems, 47(4):547-553,
 Wine Quality dataset, UCI Machine Learning Repository (id 186), licensed CC BY 4.0.
 Libraries: scikit-learn, pandas, NumPy, matplotlib, joblib, PyYAML, pytest, ruff.
 ## Authors
-<Haidra Mohammad>, <MEDOUNE MITCHEL FALL>
+- Haidra Mohammad
+- Medoune Mitchell Fall
